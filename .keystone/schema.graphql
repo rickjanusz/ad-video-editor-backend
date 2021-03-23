@@ -151,6 +151,7 @@ type Video {
   id: ID!
   name: String
   blob: String
+  status: String
 }
 
 input VideoWhereInput {
@@ -196,6 +197,24 @@ input VideoWhereInput {
   blob_not_ends_with_i: String
   blob_in: [String]
   blob_not_in: [String]
+  status: String
+  status_not: String
+  status_contains: String
+  status_not_contains: String
+  status_starts_with: String
+  status_not_starts_with: String
+  status_ends_with: String
+  status_not_ends_with: String
+  status_i: String
+  status_not_i: String
+  status_contains_i: String
+  status_not_contains_i: String
+  status_starts_with_i: String
+  status_not_starts_with_i: String
+  status_ends_with_i: String
+  status_not_ends_with_i: String
+  status_in: [String]
+  status_not_in: [String]
 }
 
 input VideoWhereUniqueInput {
@@ -209,11 +228,14 @@ enum SortVideosBy {
   name_DESC
   blob_ASC
   blob_DESC
+  status_ASC
+  status_DESC
 }
 
 input VideoUpdateInput {
   name: String
   blob: String
+  status: String
 }
 
 input VideosUpdateInput {
@@ -224,6 +246,7 @@ input VideosUpdateInput {
 input VideoCreateInput {
   name: String
   blob: String
+  status: String
 }
 
 input VideosCreateInput {
